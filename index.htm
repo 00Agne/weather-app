@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframe</title>
+    <!-- CSS only -->
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="City search "
+              autocomplete="off"
+              class="search"
+              id="city-input"
+            />
+          </div>
+          <div class="col-3">
+            <input type="submit" value="Search" class="btn" />
+          </div>
+          <div class="col-3">
+            <button id="current" class="btn">Current</button>
+          </div>
+        </div>
+      </form>
+      <h2 id="city">
+        <br />
+        <span class="country" id="country"></span>
+      </h2>
+      <div class="row">
+        <div class="col-6">
+          <h5>
+            <span class="temperature" id="temperature"></span>
+            °C
+            <span id="today">Today</span>
+          </h5>
+        </div>
+
+        <div class="col-6">
+          <ul class="list">
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h6>Monday</h6>
+
+          <p>
+            12° 🌥️<br />
+            4°
+          </p>
+        </div>
+        <div class="col">
+          <h6>Tuesday</h6>
+
+          <p>
+            11° ☁️ <br />
+            6°
+          </p>
+        </div>
+        <div class="col">
+          <h6>Wednesday</h6>
+
+          <p>
+            13° 🌧️ <br />
+            8°
+          </p>
+        </div>
+        <div class="col">
+          <h6>Thursday</h6>
+
+          <p>
+            11° 🌥️ <br />
+            4°
+          </p>
+        </div>
+        <div class="col">
+          <h6>Friday</h6>
+
+          <p>
+            10° ☁️ <br />
+            6°
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
