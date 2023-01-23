@@ -28,6 +28,7 @@ timeElement.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );

@@ -43,6 +43,11 @@ h6 {
 h5 {
   text-align: right;
   color: blue;
+  margin-bottom: 0;
+}
+.temperature {
+  text-align: left;
+  font-size: 30px;
 }
 
 .col {
@@ -54,7 +59,7 @@ h5 {
 h2 {
   position: relative;
   margin-top: 0px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 a {
   text-decoration: none;
@@ -62,10 +67,15 @@ a {
 li {
   list-style: none;
   color: blue;
+  text-align: left;
+  margin-left: 20px;
 }
 .list {
   text-align: center;
 }
 footer {
+  text-align: center;
+}
+.sunny {
   text-align: center;
 }
