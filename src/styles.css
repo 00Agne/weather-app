@@ -73,6 +73,9 @@ li {
 .list {
   text-align: center;
 }
+li::first-letter {
+  text-transform: capitalize;
+}
 footer {
   text-align: center;
 }

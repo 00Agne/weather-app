@@ -36,6 +36,8 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function searchCity(city) {
