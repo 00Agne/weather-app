@@ -82,3 +82,7 @@ footer {
 .sunny {
   text-align: center;
 }
+.active {
+  color: black;
+  cursor: default;
+}
