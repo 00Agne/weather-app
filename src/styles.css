@@ -37,9 +37,7 @@ p {
   text-align: center;
   padding: 10px 15px;
 }
-h6 {
-  text-align: center;
-}
+
 h5 {
   text-align: right;
   color: blue;
@@ -85,4 +83,7 @@ footer {
 .active {
   color: black;
   cursor: default;
+}
+.weather-forecast-date {
+  text-align: center;
 }
