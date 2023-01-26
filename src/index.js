@@ -26,7 +26,7 @@ let timeElement = document.querySelector("#today");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let days = ["Thursday", "Friday", "Saturday"];
   let forecastHTML = `<div class="row">`;
@@ -51,7 +51,13 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+}
+
+function getForecast(coordinates) {
+  let apiKey = "5354b60afda2b7800186c06153932396";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
@@ -75,6 +81,8 @@ function displayWeatherCondition(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -132,5 +140,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Kaunas");
-
-displayForecast();
