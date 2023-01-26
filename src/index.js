@@ -26,6 +26,34 @@ let timeElement = document.querySelector("#today");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thursday", "Friday", "Saturday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <p>
+                <span class="weather-forecast-temp-max">12°</span>
+                <img
+                  src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="30"
+                /><br />
+                <span class="weather-forecast-temp-min">4°</span>
+              </p>
+            </div>
+          
+    `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -104,3 +132,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Kaunas");
+
+displayForecast();
