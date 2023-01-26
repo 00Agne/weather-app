@@ -32,6 +32,7 @@
 }
 p {
   border-style: solid;
+  border-width: thin;
   border-radius: 60px;
   border-color: grey;
   text-align: center;

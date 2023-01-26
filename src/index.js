@@ -57,7 +57,7 @@ function displayForecast(response) {
               <div class="weather-forecast-date">${formatDay(
                 forecastDay.dt
               )}</div>
-              ${index}
+            
               <p>
                 <span class="weather-forecast-temp-max">${Math.round(
                   forecastDay.temp.max
@@ -67,7 +67,7 @@ function displayForecast(response) {
                     forecastDay.weather[0].icon
                   }@2x.png"
                   alt=""
-                  width="30"
+                  width="40"
                 /><br />
                 <span class="weather-forecast-temp-min">${Math.round(
                   forecastDay.temp.min
